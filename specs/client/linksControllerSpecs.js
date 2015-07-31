@@ -41,3 +41,5 @@ describe('LinksController', function () {
     expect($scope.data.links).to.eql(mockLinks);
   });
 });
+
+// FUCKING DONE MOTHERFUCKEEEEEEEER

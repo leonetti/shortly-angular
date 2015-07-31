@@ -5,13 +5,13 @@ describe('Routing', function () {
   beforeEach(inject(function($injector){
     $route = $injector.get('$route');
   }));
-
+  // APPARENTLY ALREADY FINISHED
   it('Should have /signup route, template, and controller', function () {
     expect($route.routes['/signup']).to.be.ok();
     expect($route.routes['/signup'].controller).to.be('AuthController');
     expect($route.routes['/signup'].templateUrl).to.be('app/auth/signup.html');
   });
-
+  // APPARENTLY ALREADY FINISHED
   it('Should have /signin route, template, and controller', function () {
     expect($route.routes['/signin']).to.be.ok();
     expect($route.routes['/signin'].controller).to.be('AuthController');
@@ -19,6 +19,7 @@ describe('Routing', function () {
   });
 
   it('Should have /links route, template, and controller', function () {
+    console.log(" ---- ROUTES ---- : ", $route.routes);
     expect($route.routes['/links']).to.be.ok();
     expect($route.routes['/links'].controller).to.be('LinksController');
     expect($route.routes['/links'].templateUrl).to.be('app/links/links.html');
@@ -30,3 +31,5 @@ describe('Routing', function () {
     expect($route.routes['/shorten'].templateUrl).to.be('app/shorten/shorten.html');
   });
 });
+
+// FUCKING DONE WASSUP SON
