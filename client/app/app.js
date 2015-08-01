@@ -65,7 +65,14 @@ angular.module('shortly', [
   // if it's not valid, we then redirect back to signin/signup
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
     if (next.$$route /*&& next.$$route.authenticate*/ && !Auth.isAuth()) {
-      $location.path('/signin');
+      $rootScope.signedIn = false;
+      if(next.$$route.originalPath === "/signup"){
+        $location.path('/signup');
+      } else {
+        $location.path('/signin');
+      }
+    } else {
+      $rootScope.signedIn = true;
     }
   });
 });
