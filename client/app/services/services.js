@@ -14,7 +14,7 @@ angular.module('shortly.services', [])
       });
     },
 
-    addLink: function(url){
+    addLink: function(url, callback){
       $http({
         method: 'POST',
         url: '/api/links',
@@ -23,7 +23,7 @@ angular.module('shortly.services', [])
       .then(function(resp) {
 
         // THIS MAY NEED TO CHANGE
-        return resp.data;
+        callback(resp.data);
       });
     }
   };
