@@ -1,11 +1,11 @@
 angular.module('shortly.shorten', [])
 
 .controller('ShortenController', function ($scope, $location, Links) {
-  $scope.link = {
-  };
+  $scope.link = {};
 
   $scope.addLink = function(url) {
     Links.addLink({url: url}, function(data){
+      $scope.link = data;
       console.log(data);
     });
   };
