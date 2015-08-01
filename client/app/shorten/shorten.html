@@ -4,7 +4,7 @@
       <input class='text' type='text' name='url' ng-model="inputUrl">
       <input type='submit' value='Shorten' ng-click="addLink(inputUrl); inputUrl = '';">
   </form>
-  <div class='message'></div>
+  <div class='message'>{{message}}</div>
 
   <div class="link" ng-model="link" ng-show="link.url">
     <img class="spinner" src='../assets/redirect_icon.png'/>

@@ -14,6 +14,7 @@ angular.module('shortly.auth', [])
         $location.path('/links');
       })
       .catch(function (error) {
+        $scope.message = "Invalid Username or Password";
         console.error(error);
       });
   };
@@ -25,6 +26,7 @@ angular.module('shortly.auth', [])
         $location.path('/links');
       })
       .catch(function (error) {
+        $scope.message = "Username Already Taken";
         console.error(error);
       });
   };
