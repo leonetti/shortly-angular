@@ -6,13 +6,15 @@
 
 html {
   box-sizing: border-box;
+  background: linear-gradient(to bottom, #294A4C, #629499);
+  min-height: 100%;
 }
 
 body {
   margin: 0;
   margin-top: 10px;
   font-family: 'Lato', sans-serif;
-  background-color: #294A4C;
+  height: 100%;
   color: white;
 }
 
@@ -93,7 +95,7 @@ h1.sub {
 
 input#button {
   display: block;
-  padding: 6px;
+  padding: 10px;
   background-color: white;
 }
 
