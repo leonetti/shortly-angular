@@ -1,8 +1,8 @@
-<div id='container' ng-controller = "ShortenController">HERE'S THE SHORTENER
+<div id='container' ng-controller = "ShortenController">
 <!-- Your code here -->
   <form>
       <input class='text' type='text' name='url' ng-model="inputUrl">
-      <input type='submit' value='Shorten' ng-click="addLink(inputUrl); inputUrl = '';">
+      <input id='button' type='submit' value='Shorten' ng-click="addLink(inputUrl); inputUrl = '';">
   </form>
   <div class='message'>{{message}}</div>
 
